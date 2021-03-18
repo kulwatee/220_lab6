@@ -64,6 +64,7 @@ int main()
                 nn[k][l-1]='-';
                 l--;
             }
+            break;
 
         }
     }
