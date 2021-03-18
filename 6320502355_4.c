@@ -10,7 +10,9 @@ int main()
     {
         for(j=0; j<2; j++)
         {
+
             scanf("%d",&a[i][j]);
+
             b[a[i][j]]++;
         }
     }
