@@ -2,7 +2,7 @@
 #include<string.h>
 int main()
 {
-    int n,k,i,w,l,q;
+    int n,k,i,w,l,q,d=0;
     scanf("%d",&n);
     char a[n][1000],b[1000];
     for(i=0; i<n; i++)
@@ -12,7 +12,12 @@ int main()
     for(w=1; w<n; w++)
     {
         k=0;
-        while(a[w][0]%32>a[k][0]%32)
+        while(a[w][d]==a[k][d])
+        {
+            d++;
+        }
+
+        while(a[w][d]>a[k][d])
         {
             k++;
         }
