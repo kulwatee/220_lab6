@@ -17,7 +17,7 @@ int main()
             k++;
         }
         strcpy(b,a[w]);
-        for(l=0; l<w-k-1; l++)
+        for(l=0; l<w-k+1; l++)
         {
             strcpy(a[w-l],a[w-l-1]);
         }
@@ -28,6 +28,6 @@ int main()
         printf("%s",a[q]);
         if(q<n-1)
             printf("\n");
-        }
+    }
 
 }
