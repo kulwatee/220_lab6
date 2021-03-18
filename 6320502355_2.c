@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,a,b,i,j;
+    int n,a,b,i,j,q,k;
     scanf("%d",&n);
     scanf("%d",&a);
     scanf("%d",&b);
@@ -16,5 +16,11 @@ int main()
         y[j]=b%10;
         b=b/10;
     }
+    for(q=0;q<n;q++)
+    {
+        if(x[q]==y[q])
+            k++;
+    }
+    printf("%d %d",k,n-k);
 
 }
