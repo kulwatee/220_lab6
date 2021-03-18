@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,m,h,b,c,i,max;
+    int n,m,h,b,c,i,max,p=0,q;
     scanf("%d %d",&n,&m);
     signed long a[n];
     char t;
@@ -11,22 +11,27 @@ int main()
     }
     for(i=0; i<m; i++)
     {
-        scanf("%c %d %ld",&t,&b,&c);
+        scanf("%c",&t);
+        fflush(stdin);
+        scanf("%d %d",&b,&c);
         if(t=='U')
         {
             a[b]=c;
         }
         else if(t=='P')
         {
-            max=a[b];
-            while(b<c)
-            {
-                max=a[c];
-            }
-
-
-
+            p++;
         }
-
+    }
+    for(q=0; q<p; q++)
+    {
+        max=a[b];
+        while(b<c)
+        {
+            max=a[c];
+        }
+        printf("%d",max);
+        if(q<n-1)
+            printf("\n");
     }
 }
