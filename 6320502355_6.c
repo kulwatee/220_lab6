@@ -2,7 +2,7 @@
 #include<string.h>
 int main()
 {
-    int n,i,j,k=0,l=0,q;
+    int n,i,j,k=0,l=0,q,w,e;
     scanf("%d",&n);
     fflush(stdin);
     char nn[n][n],x[250];
@@ -38,6 +38,12 @@ int main()
                 l--;
             }
         }
+    }
+    for(w=0;w<n;w++)
+    {
+        for(e=0;e<n;e++)
+            printf("%c",nn[w][e]);
+        printf("\n");
     }
 
 
