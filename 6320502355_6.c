@@ -7,41 +7,44 @@ int main()
     fflush(stdin);
     char nn[n][n],x[250];
     gets(x);
-    for(i=0;i<n;i++)
+    for(i=0; i<n; i++)
     {
-        for(j=0;j<n;j++)
+        for(j=0; j<n; j++)
             nn[i][j]='.';
     }
-    for(q=0;q<strlen(x);q++)
+    for(q=0; q<strlen(x); q++)
     {
         switch(x[q])
         {
-            case 'U' : if(k-1>=0)
+        case 'U' :
+            if(k-1>=0)
             {
                 nn[k][l]='|';
                 k--;
-            }
-            case 'D' : if(k+1<n)
+            }break;
+        case 'D' :
+            if(k+1<n)
             {
                 nn[k][l]='|';
                 k++;
-
-            }
-            case 'R' : if(l+1<n)
+            }break;
+        case 'R' :
+            if(l+1<n)
             {
                 nn[k][l]='-';
                 l++;
-            }
-            case 'L' : if(l-1>=0)
+            }break;
+        case 'L' :
+            if(l-1>=0)
             {
                 nn[k][l]='-';
                 l--;
-            }
+            }break;
         }
     }
-    for(w=0;w<n;w++)
+    for(w=0; w<n; w++)
     {
-        for(e=0;e<n;e++)
+        for(e=0; e<n; e++)
             printf("%c",nn[w][e]);
         printf("\n");
     }
