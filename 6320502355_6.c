@@ -23,8 +23,9 @@ int main()
                     nn[k][l]='|';
                 else if(nn[k][l]=='-')
                     nn[k][l]='+';
-                k--;
+
                 nn[k-1][l]='|';
+                k--;
 
             }
             break;
@@ -35,8 +36,9 @@ int main()
                     nn[k][l]='|';
                 else if(nn[k][l]=='-')
                     nn[k][l]='+';
-                k++;
+
                 nn[k+1][l]='|';
+                k++;
             }
             break;
         case 'R' :
@@ -46,21 +48,23 @@ int main()
                     nn[k][l]='-';
                 else if(nn[k][l]=='|')
                     nn[k][l]='+';
+
+                nn[k][l+1]='-';
                 l++;
-                nn[k][l+1]='|';
             }
             break;
         case 'L' :
             if(l-1>=0)
             {
                 if(nn[k][l]=='.')
-                    nn[k][l]='|';
-                else if(nn[k][l]=='-')
+                    nn[k][l]='-';
+                else if(nn[k][l]=='|')
                     nn[k][l]='+';
+
+                nn[k][l-1]='-';
                 l--;
-                nn[k][l-1]='|';
             }
-            break;
+
         }
     }
     for(w=0; w<n; w++)
